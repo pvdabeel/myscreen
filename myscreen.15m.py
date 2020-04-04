@@ -70,13 +70,18 @@ def main(argv):
 
     app_print_logo()
     prefix = '' 
-   
+
+    no_sessions = True
+
     for session in list_screens(): 
+       no_sessions = False
        if session.status == 'Attached':
           print ('%sSession:\t %s\t%s%s%s| refresh=true terminal=true bash="%s" param1="%s" color=%s' % (prefix, justify(session.name,12), CGREEN,session.status,CEND, "screen -x", session.name, color))
        else:
           print ('%sSession:\t %s\t%s%s%s| refresh=true terminal=true bash="%s" param1="%s" color=%s' % (prefix, justify(session.name,12), CRED,session.status,CEND, "screen -r", session.name, color))
           
+    if no_sessions:
+        print ('No sessions found')
 
 if __name__ == '__main__':
     main(sys.argv)
