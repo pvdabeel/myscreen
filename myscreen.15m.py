@@ -1,21 +1,20 @@
 #!/usr/bin/env PYTHONIOENCODING=UTF-8 /usr/bin/python
 # -*- coding: utf-8 -*-
 #
-# <bitbar.title>MyScreen</bitbar.title>
-# <bitbar.version>v1.0</bitbar.version>
-# <bitbar.author>pvdabeel@mac.com</bitbar.author>
-# <bitbar.author.github>pvdabeel</bitbar.author.github>
-# <bitbar.desc>List and connect to screen sessions from the Mac OS X menubar</bitbar.desc>
-# <bitbar.dependencies>python</bitbar.dependencies>
+# <xbar.title>MyScreen</xbar.title>
+# <xbar.version>v1.0</xbar.version>
+# <xbar.author>pvdabeel@mac.com</xbar.author>
+# <xbar.author.github>pvdabeel</xbar.author.github>
+# <xbar.desc>List and connect to screen sessions from the Mac OS X menubar</xbar.desc>
+# <xbar.dependencies>python</xbar.dependencies>
 #
 # Licence: GPL v3
 
 # Installation instructions: 
 # Run 'sudo easy_install screenutils' in Terminal.app
-# Ensure you have bitbar installed https://github.com/matryer/bitbar/releases/latest
-# Ensure your bitbar plugins directory does not have a space in the path (known bitbar bug)
-# Copy this file to your bitbar plugins folder and chmod +x the file from your terminal in that folder
-# Run bitbar
+# Ensure you have xbar installed https://github.com/matryer/xbar/releases/latest
+# Copy this file to your xbar plugins folder and chmod +x the file from your terminal in that folder
+# Run xbar
 
 import sys
 import os
@@ -33,7 +32,7 @@ CBLUE   = '\33[34m'
 CGRAY   = '\33[30m'
 
 # Support for OS X Dark Mode
-DARK_MODE=os.getenv('BitBarDarkMode',0)
+DARK_MODE=os.getenv('XBARDarkMode',0)
 
 
 # Logo for both dark mode and regular mode
@@ -76,9 +75,9 @@ def main(argv):
     for session in list_screens(): 
        no_sessions = False
        if session.status == 'Attached':
-          print ('%sSession:\t %s\t%s%s%s| refresh=true terminal=true bash="%s" param1="%s" color=%s' % (prefix, justify(session.name,12), CGREEN,session.status,CEND, "screen -x", session.name, color))
+          print ('%sSession:\t %s\t%s%s%s| refresh=true terminal=true shell="%s" param1="%s" color=%s' % (prefix, justify(session.name,12), CGREEN,session.status,CEND, "screen -x", session.name, color))
        else:
-          print ('%sSession:\t %s\t%s%s%s| refresh=true terminal=true bash="%s" param1="%s" color=%s' % (prefix, justify(session.name,12), CRED,session.status,CEND, "screen -r", session.name, color))
+          print ('%sSession:\t %s\t%s%s%s| refresh=true terminal=true shell="%s" param1="%s" color=%s' % (prefix, justify(session.name,12), CRED,session.status,CEND, "screen -r", session.name, color))
           
     if no_sessions:
         print ('No sessions found')
