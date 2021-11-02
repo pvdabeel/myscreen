@@ -1,5 +1,5 @@
 
-# MyScreen - OS X Menubar plugin
+# MyScreen - MacOS Menubar plugin
 
 Displays the running screen sessions in the Mac OS X menubar. 
 Allows you to connect to these screen sessions.
