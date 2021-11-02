@@ -31,8 +31,8 @@ CYELLOW = '\33[33m'
 CBLUE   = '\33[36m'
 CGRAY   = '\33[30m'
 
-# Support for OS X Dark Mode
-DARK_MODE=os.getenv('XBARDarkMode',0)
+# Support for OS X Dark Mode                                                    
+DARK_MODE=True if os.getenv('XBARDarkMode','false') == 'true' else False
 
 
 # Logo for both dark mode and regular mode
@@ -60,13 +60,13 @@ def important(string):
 # The main function
 def main(argv):
 
-    if DARK_MODE:
-        color = '#FFDEDEDE'
-        info_color = '#808080'
-    else:
-        color = 'black' 
-        info_color = '#808080'
-
+    if bool(DARK_MODE):                                                         
+        color = '#FFFFFE'                                                       
+        info_color = '#C0C0C0'                                                  
+    else:                                                                       
+        color = '#00000E'                                                       
+        info_color = '#616161'                                                  
+                               
     app_print_logo()
     prefix = '' 
 
