@@ -1,11 +1,11 @@
-#!/usr/bin/env PYTHONIOENCODING=UTF-8 /Library/Frameworks/Python.framework/Versions/2.7/bin/python
+#!/usr/bin/env PYTHONIOENCODING=UTF-8 /opt/local/bin/python3
 # -*- coding: utf-8 -*-
 #
 # <xbar.title>MyScreen</xbar.title>
 # <xbar.version>v1.0</xbar.version>
 # <xbar.author>pvdabeel@mac.com</xbar.author>
 # <xbar.author.github>pvdabeel</xbar.author.github>
-# <xbar.desc>List and connect to screen sessions from the MacOS menubar</xbar.desc>
+# <xbar.desc>List and connect to screen sessions from the Mac OS X menubar</xbar.desc>
 # <xbar.dependencies>python</xbar.dependencies>
 #
 # Licence: GPL v3

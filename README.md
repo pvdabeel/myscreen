@@ -10,8 +10,7 @@ Allows you to connect to these screen sessions.
 
 ## Installation instructions: 
 
-0. Download [python](http://www.python.org) version 2.7  
-1. Execute 'sudo easy_install screenutils' in Terminal.app
+1. Execute 'sudo pip install screenutils' in Terminal.app
 2. Ensure you have [xbar](https://github.com/matryer/xbar/releases/latest) installed.
 3. Copy [myscreen.15m.py](myscreen.15m.py) to your xbar plugins folder and chmod +x the file from your terminal in that folder
 4. Run xbar
