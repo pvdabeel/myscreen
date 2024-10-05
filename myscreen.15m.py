@@ -1,4 +1,4 @@
-#!/usr/bin/env PYTHONIOENCODING=UTF-8 /opt/local/bin/python3
+#!/usr/bin/env PYTHONIOENCODING=UTF-8 PATH=/usr/local/bin:/opt/local/bin:$PATH /opt/local/bin/python
 # -*- coding: utf-8 -*-
 #
 # <xbar.title>MyScreen</xbar.title>
@@ -20,8 +20,8 @@ import sys
 import os
 import subprocess
 
-from screenutils import list_screens, Screen
 
+from screenutils import list_screens, Screen
 
 # Nice ANSI colors
 CEND    = '\33[0m'
