@@ -8,9 +8,10 @@ Allows you to connect to these screen sessions.
 
 ## Licence: GPL v3
 
-## Installation instructions: 
+## Installation instructions:
 
-1. Execute 'sudo pip install screenutils' in Terminal.app
-2. Ensure you have [xbar](https://github.com/matryer/xbar/releases/latest) installed.
-3. Copy [myscreen.15m.py](myscreen.15m.py) to your xbar plugins folder and chmod +x the file from your terminal in that folder
-4. Run xbar
+1. Ensure you have [xbar](https://github.com/matryer/xbar/releases/latest) installed.
+2. Copy [myscreen.15m.py](myscreen.15m.py) to your xbar plugins folder and `chmod +x` the file from your terminal in that folder.
+3. Run xbar.
+
+Requires Python 3 and the `screen` command (both standard on macOS). No third-party Python packages are needed.
