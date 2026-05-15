@@ -66,14 +66,29 @@ def main(argv):
         print('No sessions found')
         return
 
+    dead_sessions = [n for n, s in sessions if 'dead' in s.lower()]
+
     for name, status in sessions:
         attached = status == 'Attached'
+        is_dead  = 'dead' in status.lower()
         flag     = '-x' if attached else '-r'
         scolor   = CGREEN if attached else CRED
         print(
             f'Session:\t {justify(name, 12)}\t{scolor}{status}{CEND}'
             f'| refresh=true terminal=true shell="screen" param1="{flag}"'
             f' param2="{name}" color={color}'
+        )
+        if is_dead:
+            print(
+                f'--Wipe| refresh=true terminal=true shell="screen"'
+                f' param1="-wipe" param2="{name}" color={color}'
+            )
+
+    if len(dead_sessions) > 1:
+        print('---')
+        print(
+            f'Wipe all dead sessions| refresh=true terminal=true'
+            f' shell="screen" param1="-wipe" color={color}'
         )
 
 
